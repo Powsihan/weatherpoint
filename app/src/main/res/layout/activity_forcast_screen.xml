@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#30303C"
+    android:orientation="vertical"
+    tools:context=".MainScreen"
+    android:id="@+id/parentLayout">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#30303C">
+
+        <ImageView
+            android:id="@+id/img_view_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="#30303C"
+            android:contentDescription="@string/logoDesc"
+            android:src="@drawable/logo"
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            tools:ignore="VisualLintBounds"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/forecast_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="410dp"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/idSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/search_view_corner"
+            android:elevation="5dp"
+            app:goIcon="@android:drawable/ic_menu_search"
+            app:iconifiedByDefault="false"
+            app:queryHint="Search Here"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginStart="13dp"
+            android:background="#C1FFFC">
+
+            <LinearLayout
+                android:id="@+id/ll_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#30303C"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/img_btn_refresh"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/madrefresh"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="730dp"
+            app:cardBackgroundColor="#4A4A57">
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="400dp"
+            android:elevation="5dp"
+            app:cardBackgroundColor="#4A4A57"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="223dp"
+                    app:cardBackgroundColor="#4A4A57">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/cityLable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="Madras"
+                            android:textSize="25dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            tools:ignore="TextSizeCheck" />
+
+                        <ImageView
+                            android:id="@+id/wIcon1"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginLeft="240dp"/>
+<!--                            app:srcCompat="@drawable/sunny" />-->
+
+                        <TextView
+                            android:id="@+id/day1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="55dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="Day 1"
+                            android:textSize="14dp"
+                            android:textColor="@color/white"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="88dp"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/white"
+                            android:text="--------------------------------------"/>
+
+                        <TextView
+                            android:id="@+id/forcastDis1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="170dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="Scorching Sun"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/celcius1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="115dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="28 °C"
+                            android:textSize="40dp"
+                            android:textColor="@color/white"
+                            tools:ignore="TextSizeCheck" />
+
+
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="103dp"
+                    android:layout_height="126dp"
+                    android:layout_marginTop="223dp"
+                    app:cardBackgroundColor="#4A4A57">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <TextView
+                            android:id="@+id/day2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Day 2"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            tools:ignore="TextSizeCheck" />
+
+                        <ImageView
+                            android:id="@+id/wIcon2"
+                            android:layout_width="39dp"
+                            android:layout_height="39dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"/>
+<!--                            app:srcCompat="@drawable/raining" />-->
+
+                        <TextView
+                            android:id="@+id/forcastDis2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="2dp"
+                            android:text="Moderate rain"
+                            android:textSize="12dp"
+                            android:textColor="@color/white"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/celcius2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="26 °C"
+                            android:textSize="12dp"
+                            android:textColor="@color/white"
+                            tools:ignore="TextSizeCheck" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="103dp"
+                    android:layout_height="126dp"
+                    android:layout_marginTop="223dp"
+                    android:layout_marginLeft="103dp"
+                    app:cardBackgroundColor="#4A4A57">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <TextView
+                            android:id="@+id/day3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Day 3"
+                            android:textSize="12dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            tools:ignore="TextSizeCheck" />
+                        <ImageView
+                            android:id="@+id/wIcon3"
+                            android:layout_width="39dp"
+                            android:layout_height="39dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"/>
+<!--                            app:srcCompat="@drawable/thunndercloud" />-->
+
+                        <TextView
+                            android:id="@+id/forcastDis3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="2dp"
+                            android:text="Thunder Cloud"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/celcius3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="24 °C"
+                            android:textSize="12dp"
+                            android:textColor="@color/white"
+                            tools:ignore="TextSizeCheck" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="103dp"
+                    android:layout_height="126dp"
+                    android:layout_marginTop="223dp"
+                    android:layout_marginLeft="206dp"
+                    app:cardBackgroundColor="#4A4A57">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <TextView
+                            android:id="@+id/day4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Day 4"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            tools:ignore="TextSizeCheck" />
+                        <ImageView
+                            android:id="@+id/wIcon4"
+                            android:layout_width="39dp"
+                            android:layout_height="39dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"/>
+<!--                            app:srcCompat="@drawable/raining" />-->
+
+                        <TextView
+                            android:id="@+id/forcastDis4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="2dp"
+                            android:text="moderate rain"
+                            android:textSize="12dp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/celcius4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="27 °C"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            tools:ignore="TextSizeCheck" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="103dp"
+                    android:layout_height="126dp"
+                    android:layout_marginTop="223dp"
+                    android:layout_marginLeft="309dp"
+                    app:cardBackgroundColor="#4A4A57">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <TextView
+                            android:id="@+id/day5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Day 5"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            tools:ignore="TextSizeCheck" />
+                        <ImageView
+                            android:id="@+id/wIcon5"
+                            android:layout_width="39dp"
+                            android:layout_height="39dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"/>
+<!--                            app:srcCompat="@drawable/partialycloudyday" />-->
+
+                        <TextView
+                            android:id="@+id/forcastDis5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="2dp"
+                            android:text="Partialy Cloudy day"
+                            android:gravity="center"
+                            android:textSize="12dp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/celcius5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="26 °C"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            tools:ignore="TextSizeCheck" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+    </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rowCount="1"
+            android:columnCount="4"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:background="#59CBE8">
+
+            <ImageButton
+                android:id="@+id/img_btn_home"
+                android:layout_width="103dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/madhome"
+                app:srcCompat="@drawable/ic_launcher_foreground"
+                android:background="#30303C"
+                android:scaleType="fitCenter"
+                android:contentDescription="home image"
+                android:padding="12dp"/>
+
+            <ImageButton
+                android:id="@+id/img_btn_forecast"
+                android:layout_width="103dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/madforecast"
+                app:srcCompat="@drawable/ic_launcher_foreground"
+                android:background="#30303C"
+                android:scaleType="fitCenter"
+                android:contentDescription="forecast image"
+                android:padding="12dp"/>
+
+            <ImageButton
+                android:id="@+id/img_btn_weather"
+                android:layout_width="104dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/madweather"
+                app:srcCompat="@drawable/ic_launcher_foreground"
+                android:background="#30303C"
+                android:scaleType="fitCenter"
+                android:contentDescription="weather image"
+
+                android:padding="12dp"/>
+
+            <ImageButton
+                android:id="@+id/img_btn_location"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/madlocation"
+                app:srcCompat="@drawable/ic_launcher_foreground"
+                android:background="#30303C"
+                android:scaleType="fitCenter"
+                android:contentDescription="location image"
+                android:padding="12dp"/>
+        </GridLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
