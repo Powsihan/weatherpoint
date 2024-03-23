@@ -56,7 +56,7 @@
         android:layout_width="390dp"
         android:layout_height="200dp"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="495dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="15dp"
         android:background="@color/material_dynamic_neutral_variant40"
         app:cardCornerRadius="5dp"
@@ -163,7 +163,7 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="5dp"
             app:cardElevation="5dp"
-            android:layout_marginTop="700dp"
+            android:layout_marginTop="600dp"
             android:layout_marginLeft="218dp"
             android:background="#C1FFFC">
 
@@ -202,7 +202,7 @@
             android:layout_width="390dp"
             android:layout_height="360dp"
             android:layout_marginStart="13dp"
-            android:layout_marginTop="335dp"
+            android:layout_marginTop="75dp"
             android:layout_marginEnd="15dp"
             android:background="@color/material_dynamic_neutral_variant40"
             app:cardCornerRadius="5dp"
@@ -339,7 +339,7 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="5dp"
             app:cardElevation="5dp"
-            android:layout_marginTop="700dp"
+            android:layout_marginTop="600dp"
             android:layout_marginStart="13dp"
             android:background="#C1FFFC">
 
@@ -367,7 +367,7 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="5dp"
             app:cardElevation="5dp"
-            android:layout_marginTop="700dp"
+            android:layout_marginTop="600dp"
             android:layout_marginStart="70dp"
             android:background="#C1FFFC">
 
@@ -388,71 +388,77 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rowCount="1"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:columnOrderPreserved="false"
+                    android:background="#59CBE8">
+
+                    <ImageButton
+                        android:id="@+id/img_btn_home"
+                        android:layout_width="103dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/madhome"
+                        app:srcCompat="@drawable/ic_launcher_foreground"
+                        android:background="#30303C"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="home image"
+                        android:padding="12dp"/>
+
+                    <ImageButton
+                        android:id="@+id/img_btn_forecast"
+                        android:layout_width="103dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/madforecast"
+                        app:srcCompat="@drawable/ic_launcher_foreground"
+                        android:background="#30303C"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="forecast image"
+                        android:padding="12dp"/>
+
+                    <ImageButton
+                        android:id="@+id/img_btn_weather"
+                        android:layout_width="104dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/madweather"
+                        app:srcCompat="@drawable/ic_launcher_foreground"
+                        android:background="#30303C"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="weather image"
+                        android:padding="12dp"/>
+
+                    <ImageButton
+                        android:id="@+id/img_btn_location"
+                        android:layout_width="102dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/madlocation"
+                        app:srcCompat="@drawable/ic_launcher_foreground"
+                        android:background="#30303C"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="location image"
+                        android:padding="12dp"/>
+                </GridLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
 
     </RelativeLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:rowCount="1"
-            android:columnCount="4"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
-            android:background="#59CBE8">
-
-            <ImageButton
-                android:id="@+id/img_btn_home"
-                android:layout_width="103dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/madhome"
-                app:srcCompat="@drawable/ic_launcher_foreground"
-                android:background="#30303C"
-                android:scaleType="fitCenter"
-                android:contentDescription="home image"
-                android:padding="12dp"/>
-
-            <ImageButton
-                android:id="@+id/img_btn_forecast"
-                android:layout_width="103dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/madforecast"
-                app:srcCompat="@drawable/ic_launcher_foreground"
-                android:background="#30303C"
-                android:scaleType="fitCenter"
-                android:contentDescription="forecast image"
-                android:padding="12dp"/>
-
-            <ImageButton
-                android:id="@+id/img_btn_weather"
-                android:layout_width="104dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/madweather"
-                app:srcCompat="@drawable/ic_launcher_foreground"
-                android:background="#30303C"
-                android:scaleType="fitCenter"
-                android:contentDescription="weather image"
-                android:padding="12dp"/>
-
-            <ImageButton
-                android:id="@+id/img_btn_location"
-                android:layout_width="102dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/madlocation"
-                app:srcCompat="@drawable/ic_launcher_foreground"
-                android:background="#30303C"
-                android:scaleType="fitCenter"
-                android:contentDescription="location image"
-                android:padding="12dp"/>
-        </GridLayout>
-    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
